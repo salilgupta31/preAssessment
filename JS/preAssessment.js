@@ -32,6 +32,7 @@ function openCity(evt, cityName) {
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
 
+    //Create line chart with sample data
     var data = [{
             "sale": "30",
             "year": "0"
@@ -70,6 +71,7 @@ function openCity(evt, cityName) {
             "sale": "25",
             "year": "5"
         }];
+
     var vis = d3.select("#visualisation"),
         WIDTH = 1000,
         HEIGHT = 250,
@@ -108,14 +110,27 @@ function openCity(evt, cityName) {
         return yScale(d.sale);
       });
 
-      vis.append('svg:path')
+    var tip = d3.tip()
+      .attr('class', 'd3-tip')
+      .offset([-10, 0])
+      .html(function(d) {
+        return "<span style='color:white'>Sample Data</span>";
+      })
+
+    vis.call(tip);
+
+    vis.append('svg:path')
           .attr('d', lineGen(data))
           .attr('stroke', 'green')
           .attr('stroke-width', 2)
-          .attr('fill', 'none');
+          .attr('fill', 'none')
+          .on('mouseover', tip.show)
+          .on('mouseout', tip.hide);
 
-        vis.append('svg:path')
+    vis.append('svg:path')
           .attr('d', lineGen(data1))
           .attr('stroke', 'blue')
           .attr('stroke-width', 2)
-          .attr('fill', 'none');
+          .attr('fill', 'none')
+          .on('mouseover', tip.show)
+          .on('mouseout', tip.hide);
