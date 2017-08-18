@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="Style/common.css"></link>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    
+</head>
+<body>
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'Explore')" ><i class="fa fa-compass" aria-hidden="true"></i>&nbsp; Explore</button>
+          <button class="tablinks" onclick="openCity(event, 'Query')" id="defaultOpen"><i class="fa fa-search" aria-hidden="true"></i>&nbsp; Query</button>
+          <button class="tablinks" onclick="openCity(event, 'Compare')"><i class="fa fa-bar-chart" aria-hidden="true"></i>&nbsp; Compare</button>
+          <button class="tablinks" onclick="openCity(event, 'Upload')"><i class="fa fa-cloud-upload" aria-hidden="true"></i>&nbsp; Upload</button>
+        </div>
+
+        <div id="Explore" class="tabcontent">
+        </div>
+
+        <div id="Query" class="tabcontent">
+            <nav>
+                <div class="navTab">
+                    <button class="navTabLinks">Type Selection</button>
+                    <button class="selected">Sample 001&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i></button>
+                </div>
+                <div class="panel">
+                      <p>Lorem ipsum...</p>
+                </div>
+
+                <button class="accordion">Select to Add Query Parameter&nbsp;<i class="fa fa-caret-down" style="float: right;" aria-hidden="true"></i></button>
+                <div class="panel">
+                    <p>Lorem ipsum...</p>
+                </div>
+                <div class="navBar">
+                    <button>All Inputs</button>
+                    <button>All Outputs</button>
+                    <button><i class="fa fa-trash-o" aria-hidden="true"></i>&nbsp;Clear</button>
+                </div>
+                <p style="text-align:center;color:#a8aaad">No Selected Query Parameter</p><br />
+                <br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br />
+                <br /><div class="navQueryButton">
+                    <button>Query</button>
+                </div>
+            </nav>
+
+            <article>
+                <p style="text-align:center;color:#a8aaad">No Query Data Available</h6>
+            </article>
+            <article>
+              <svg id="visualisation" width="1000" height="500"></svg>
+            </article>
+        </div>
+
+        <div id="Compare" class="tabcontent">  
+        </div>
+        <div id="Upload" class="tabcontent">
+        </div>
+        <script src="JS/preAssessment.js"></script>
+        
+    </body>
+</html> 
