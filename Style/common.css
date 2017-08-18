@@ -1,0 +1,119 @@
+body {
+    font-family: "Lato", sans-serif;
+    min-height: 900px;
+    min-width: 1100px;
+}
+nav {
+    background-color: #f1f1f1;
+    float: left;
+    height: 669px;
+    width: 18%;
+    margin: 0.2rem 0.2rem 0 0;
+    border: 1px solid gray;
+}
+
+div.navTab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #ccc;
+}
+.navTab button {
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 15px;
+}
+div.navBar {
+    overflow: hidden;
+    border: 1px solid #606a7a;
+    background-color: #606a7a;
+}
+
+.navBar button{
+    background-color: #606a7a;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+div.navQueryButton {
+    overflow: hidden;
+    background-color: #5badff;
+}
+
+.navQueryButton button{
+    background-color: #5badff;
+    color: white;
+    width: 100%;
+}
+
+.selected { 
+    background-color: #f1f1f1 !important;
+}
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    height: 44px;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 20px;
+    transform: perspective(5px) rotateX(2deg);
+    transform-origin: bottom;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: #f1f1f1;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+/* Style the buttons that are used to open and close the accordion panel */
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 90%;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+}
+
+article {
+    height: 300px;
+    border: 1px solid gray;
+    padding: 1em;
+    margin-top: 0.2rem;
+    background-color: #f1f1f1;
+    overflow: hidden;
+}
